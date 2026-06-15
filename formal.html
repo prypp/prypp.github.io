@@ -30,8 +30,8 @@
   section{counter-increment:sec}
   h2::before{content:counter(sec,decimal-leading-zero) "  ·  ";color:var(--accent);opacity:.55}
   .btn:hover{transform:translateY(-2px)}
-  .row{border-radius:10px;transition:background .25s,box-shadow .25s}
-  .row:hover{background:rgba(247,153,119,.16);box-shadow:inset 3px 0 0 var(--accent)}
+  .row{border-radius:14px;padding:18px;transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s,background .3s}
+  .row:hover{background:var(--panel);box-shadow:0 16px 36px rgba(120,70,60,.16);transform:translateY(-3px)}
   .stats{display:flex;margin-top:26px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
   .stat{flex:1;padding:15px 18px;border-right:1px solid var(--line)}
   .stat:last-child{border-right:none}
