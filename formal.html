@@ -86,8 +86,11 @@
   /* skills grid */
   .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 36px}
   @media(max-width:640px){.skills{grid-template-columns:1fr}}
-  .skill h3{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
-  .skill p{font-size:15px;color:var(--ink)}
+  .skill h3{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+  .skill .tags{display:flex;flex-wrap:wrap;gap:7px}
+  .skill .tags span{font-size:13px;font-weight:500;background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:100px;padding:5px 12px;color:var(--ink);transition:background .2s,border-color .2s}
+  .skill .tags span:hover{background:#fff;border-color:var(--accent)}
+  .skill .sub{font-size:12.5px;color:var(--dim);margin-top:9px}
 
   .creative-note{font-size:15px;color:var(--ink)}
   .creative-note a{font-weight:600}
@@ -191,10 +194,16 @@
   <section class="reveal">
     <h2>Skills</h2>
     <div class="skills">
-      <div class="skill"><h3>Languages</h3><p>Japanese — JLPT N2 (N1 in preparation) · Thai — Native · English — Conversational (TOEIC 640)</p></div>
-      <div class="skill"><h3>Admin &amp; Coordination</h3><p>Reception-team management (5+), shift scheduling, general affairs (GA), purchasing, cashier &amp; invoicing, bilingual document drafting, and customer / internal–external coordination.</p></div>
-      <div class="skill"><h3>AI &amp; Workspace</h3><p>Daily user of AI tools — Claude, Gemini, ChatGPT, Codex — for translation review, drafting and building (this site included). Comfortable with Google Workspace (Docs, Sheets, Slides) and Microsoft Office.</p></div>
-      <div class="skill"><h3>Design</h3><p>Affinity Designer/Photo, Canva, Procreate, Nomad Sculpt — print materials, social graphics, presentations (self-taught, ongoing).</p></div>
+      <div class="skill"><h3>Languages</h3>
+        <div class="tags"><span>Japanese · JLPT N2</span><span>N1 — in prep</span><span>Thai · Native</span><span>English · TOEIC 640</span></div></div>
+      <div class="skill"><h3>Admin &amp; Coordination</h3>
+        <div class="tags"><span>Team management (5+)</span><span>Scheduling</span><span>General affairs</span><span>Purchasing</span><span>Cashier &amp; invoicing</span><span>Bilingual documents</span><span>Customer &amp; vendor coordination</span></div></div>
+      <div class="skill"><h3>AI &amp; Workspace</h3>
+        <div class="tags"><span>Claude</span><span>Gemini</span><span>ChatGPT</span><span>Codex</span><span>Google Workspace</span><span>MS Office</span></div>
+        <div class="sub">Used daily for translation review, drafting &amp; building (this site included).</div></div>
+      <div class="skill"><h3>Design</h3>
+        <div class="tags"><span>Affinity</span><span>Canva</span><span>Procreate</span><span>Nomad Sculpt</span></div>
+        <div class="sub">Self-taught, ongoing.</div></div>
     </div>
   </section>
 
