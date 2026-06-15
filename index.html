@@ -224,10 +224,11 @@
   .portrait .cap{margin-top:16px;font-family:"Cormorant",serif;font-weight:600;font-size:22px;color:var(--cream)}
   .portrait .cap span{display:block;font-family:"Hanken Grotesk",sans-serif;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--cream-dim);margin-top:4px;font-weight:600}
   .cp{background:radial-gradient(80% 90% at 50% 22%,#ffc8e6,transparent 58%),radial-gradient(120% 120% at 50% 118%,#a8f0e4,transparent 60%),radial-gradient(120% 120% at 85% 60%,#e2d0ff,transparent 60%),linear-gradient(160deg,#ffeaf6,#f3ecff)}
-  .facts{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
-  .fact{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);font-size:14px}
-  .fact span:first-child{color:var(--cream-dim);text-transform:uppercase;letter-spacing:.08em;font-size:12px}
-  .fact span:last-child{text-align:right}
+  .facts{margin-top:54px;display:grid;grid-template-columns:1fr 1fr;column-gap:56px;border-top:1px solid var(--line)}
+  @media(max-width:820px){.facts{grid-template-columns:1fr;column-gap:0}}
+  .fact{display:flex;flex-direction:column;gap:5px;padding:15px 2px;border-bottom:1px solid var(--line);font-size:14px}
+  .fact span:first-child{color:var(--cream-dim);text-transform:uppercase;letter-spacing:.08em;font-size:11.5px;font-weight:600}
+  .fact span:last-child{text-align:left;line-height:1.45}
 
   /* ---------- WORK GALLERY ---------- */
   .gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:18px}
@@ -281,9 +282,11 @@
 
   /* ---------- EXPERIENCE ---------- */
   .timeline{border-top:1px solid var(--line)}
-  .xp{display:grid;grid-template-columns:210px 1fr;gap:32px;padding:28px 0;border-bottom:1px solid var(--line);transition:background .3s,padding-left .3s var(--ease)}
-  .xp:hover{background:rgba(255,255,255,.45);padding-left:14px}
-  @media(max-width:680px){.xp{grid-template-columns:1fr;gap:8px}.xp:hover{padding-left:0}}
+  .xp{display:grid;grid-template-columns:210px 1fr;gap:32px;padding:26px 20px;border-radius:18px;border-bottom:1px solid var(--line);transition:background .5s ease}
+  .xp:hover{background:radial-gradient(130% 170% at 50% 45%,rgba(255,206,58,.30),rgba(255,206,58,.09) 46%,transparent 72%)}
+  .xp.ft:hover{background:radial-gradient(130% 170% at 50% 45%,rgba(150,182,92,.36),rgba(150,182,92,.11) 46%,transparent 72%)}
+  .ft-tag{display:inline-block;margin-left:9px;vertical-align:middle;font-family:"Hanken Grotesk",sans-serif;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4f7222;background:rgba(150,182,92,.30);padding:3px 9px;border-radius:100px}
+  @media(max-width:680px){.xp{grid-template-columns:1fr;gap:8px;padding:24px 14px}}
   .xp .period{font-size:13px;font-weight:600;color:var(--accent-ink);letter-spacing:.01em}
   .xp .place{font-size:13px;color:var(--cream-dim);margin-top:5px;line-height:1.45}
   .xp h3{font-family:"Cormorant",serif;font-weight:600;font-size:27px;line-height:1.05}
@@ -416,15 +419,6 @@
     <div class="reveal">
       <p class="about-lead">Hi, I'm <b>Peeraya</b> — a Japanese-speaking coordinator &amp; translator (JLPT N2), and the maker behind <b>rayeah</b>, my art &amp; design studio.</p>
       <p class="about-body">For 4+ years I've supported Japanese teams and customers — reception coordination, bilingual document drafting, and general affairs across clinic, recruitment and retail in Thailand and Japan. I work daily across Japanese, Thai and English, and lean on AI tools (Claude, Codex) for translation review and drafting — this very site is hand-built that way. On the side I run rayeah and am writing Japanese &amp; English learning books (still in progress).</p>
-      <div class="facts">
-        <div class="fact"><span>Languages</span><span>JP — JLPT N2 (N1 in prep) · TH native · EN (TOEIC 640)</span></div>
-        <div class="fact"><span>Coordination</span><span>Reception team (5+) · bilingual docs · general affairs</span></div>
-        <div class="fact"><span>Tools</span><span>Word · Excel · PowerPoint · Affinity · Canva · AI (Claude · Codex)</span></div>
-        <div class="fact"><span>Also</span><span>Design (rayeah) · JP &amp; EN learning books</span></div>
-        <div class="fact"><span>Open to</span><span>JP-speaking officer · Coordinator · Design</span></div>
-        <div class="fact"><span>Based in</span><span>Bangkok, Thailand</span></div>
-        <div class="fact"><span>Availability</span><span>Immediately</span></div>
-      </div>
     </div>
     <div class="portrait reveal">
       <div class="frame">
@@ -434,6 +428,15 @@
       </div>
       <div class="cap">Peeraya P.<span>rayeah · Bangkok</span></div>
     </div>
+  </div>
+  <div class="facts reveal">
+    <div class="fact"><span>Languages</span><span>JP — JLPT N2 (N1 in prep) · TH native · EN (TOEIC 640)</span></div>
+    <div class="fact"><span>Coordination</span><span>Reception team (5+) · bilingual docs · general affairs</span></div>
+    <div class="fact"><span>Tools</span><span>Word · Excel · PowerPoint · Affinity · Canva · AI (Claude · Codex)</span></div>
+    <div class="fact"><span>Also</span><span>Design (rayeah) · JP &amp; EN learning books</span></div>
+    <div class="fact"><span>Open to</span><span>JP-speaking officer · Coordinator · Design</span></div>
+    <div class="fact"><span>Based in</span><span>Bangkok, Thailand</span></div>
+    <div class="fact"><span>Availability</span><span>Immediately</span></div>
   </div>
 </section>
 
@@ -457,9 +460,9 @@
       <div><div class="period">Sep 2025 — Present</div><div class="place">Freelance · Corporate &amp; individual clients</div></div>
       <div><h3>Japanese–Thai Translator</h3><p>Translate business documents, contracts and presentations between Japanese and Thai. Support business-consulting workflows through accurate JP–TH localization, leveraging JLPT N2 proficiency.</p></div>
     </div>
-    <div class="xp">
+    <div class="xp ft">
       <div><div class="period">Mar 2025 — Sep 2025</div><div class="place">KCC Co., Ltd. (LeTAO Store)<br>Otaru, Hokkaido 🇯🇵</div></div>
-      <div><h3>Shop Sales</h3><p>Served 60+ Japanese, English and multilingual customers daily at a premium confectionery brand. Operated POS systems, handled daily cashier reconciliation, and managed inventory and displays through high-traffic festival seasons.</p></div>
+      <div><h3>Shop Sales <span class="ft-tag">Full-time</span></h3><p>Served 60+ Japanese, English and multilingual customers daily at a premium confectionery brand. Operated POS systems, handled daily cashier reconciliation, and managed inventory and displays through high-traffic festival seasons.</p></div>
     </div>
     <div class="xp">
       <div><div class="period">May 2024 — Feb 2025</div><div class="place">Otani Supermarket<br>Tochigi 🇯🇵</div></div>
@@ -469,9 +472,9 @@
       <div><div class="period">Jul 2022 — Mar 2024</div><div class="place">Interculture Language Academy<br>Kobe, Japan 🇯🇵</div></div>
       <div><h3>Japanese Language Study</h3><p>Made a deliberate move to Japan for full-time immersion — building business-level Japanese (achieved JLPT N2) and first-hand cultural fluency.</p></div>
     </div>
-    <div class="xp">
+    <div class="xp ft">
       <div><div class="period">Jan 2019 — Jun 2022</div><div class="place">DYM International Clinic<br>Bangkok 🇹🇭</div></div>
-      <div><h3>Reception Manager &amp; Administration</h3><p>Supervised a reception team of 5+ and oversaw general affairs (GA) and purchasing for the Japanese medical team. Handled cashier duties and invoicing, customer contact, and coordination with both internal teams and external partners. Drafted trilingual documents, managed schedules, the patient database and 30+ multilingual inquiries daily, and provided Japanese–Thai interpretation as needed.</p></div>
+      <div><h3>Reception Manager &amp; Administration <span class="ft-tag">Full-time</span></h3><p>Supervised a reception team of 5+ and oversaw general affairs (GA) and purchasing for the Japanese medical team. Handled cashier duties and invoicing, customer contact, and coordination with both internal teams and external partners. Drafted trilingual documents, managed schedules, the patient database and 30+ multilingual inquiries daily, and provided Japanese–Thai interpretation as needed.</p></div>
     </div>
     <div class="xp">
       <div><div class="period">Aug 2018 — Dec 2018</div><div class="place">JAC Recruitment<br>Bangkok 🇹🇭</div></div>
