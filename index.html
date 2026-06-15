@@ -201,7 +201,7 @@
   .fl3{width:46px;height:46px;bottom:8%;left:65%;animation-delay:1.5s}
   .fl4{width:30px;height:30px;top:14%;right:2%;animation-delay:.5s}
   .fl5,.fl6{display:none}
-  @media(max-width:680px){.fl2,.fl3,.fl4{display:none}section .flower{display:none}.nav-toggle{display:flex}.scroll-hint{display:none}}
+  @media(max-width:680px){.fl2,.fl3,.fl4{display:none}section .flower{display:none}.nav-toggle{display:flex}.scroll-hint{display:none}.marquee{margin-top:52px}}
 
   /* drifting background blobs */
   .bg-blobs{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
@@ -221,7 +221,7 @@
     transform:translate(-50%,-50%);opacity:0;transition:opacity .5s}
 
   /* marquee */
-  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;margin-top:0}
+  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap}
   .marquee-track{display:inline-flex;gap:48px;padding:18px 0;animation:scroll 26s linear infinite;will-change:transform}
   .marquee:hover .marquee-track{animation-play-state:paused}
   .marquee span{font-family:"Cormorant",serif;font-style:italic;font-size:22px;color:var(--cream-dim)}
