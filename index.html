@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>prypp — Digital Artist & Maker</title>
-<meta name="description" content="Portfolio of prypp — digital artist and maker. Painting, illustration, and creative tooling." />
+<title>prypp — Japanese–Thai Translator & Digital Artist</title>
+<meta name="description" content="Portfolio of prypp — Japanese–Thai translator and interpreter (JLPT N2) and digital artist. Work history, languages, and art." />
 <meta name="theme-color" content="#fff2fb" />
 <link rel="canonical" href="https://prypp.github.io/" />
 <!-- favicon: hot-pink 'p.' mark on soft pink -->
@@ -12,14 +12,14 @@
 <!-- Open Graph / social share -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://prypp.github.io/" />
-<meta property="og:title" content="prypp — Digital Artist & Maker" />
-<meta property="og:description" content="Painting in pixels & light. Digital painting, illustration, and creative tooling." />
+<meta property="og:title" content="prypp — Japanese–Thai Translator & Digital Artist" />
+<meta property="og:description" content="Fluent in words & color. JP–TH translator/interpreter (JLPT N2) and digital artist." />
 <meta property="og:image" content="https://prypp.github.io/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="prypp — Digital Artist & Maker" />
-<meta name="twitter:description" content="Painting in pixels & light. Digital painting, illustration, and creative tooling." />
+<meta name="twitter:title" content="prypp — Japanese–Thai Translator & Digital Artist" />
+<meta name="twitter:description" content="Fluent in words & color. JP–TH translator/interpreter (JLPT N2) and digital artist." />
 <meta name="twitter:image" content="https://prypp.github.io/og.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -262,6 +262,16 @@
   .svc-item h3{font-family:"Cormorant",serif;font-weight:600;font-size:30px;margin:12px 0 10px}
   .svc-item p{color:var(--cream-dim);font-size:15px}
 
+  /* ---------- EXPERIENCE ---------- */
+  .timeline{border-top:1px solid var(--line)}
+  .xp{display:grid;grid-template-columns:210px 1fr;gap:32px;padding:28px 0;border-bottom:1px solid var(--line);transition:background .3s,padding-left .3s var(--ease)}
+  .xp:hover{background:rgba(255,255,255,.45);padding-left:14px}
+  @media(max-width:680px){.xp{grid-template-columns:1fr;gap:8px}.xp:hover{padding-left:0}}
+  .xp .period{font-size:13px;font-weight:600;color:var(--vermilion);letter-spacing:.01em}
+  .xp .place{font-size:13px;color:var(--cream-dim);margin-top:5px;line-height:1.45}
+  .xp h3{font-family:"Cormorant",serif;font-weight:600;font-size:27px;line-height:1.05}
+  .xp p{color:var(--cream-dim);font-size:15px;margin-top:9px;max-width:66ch}
+
   /* ---------- CONTACT ---------- */
   .contact{text-align:center}
   .contact .big{font-family:"Cormorant",serif;font-weight:600;font-size:clamp(44px,9.5vw,130px);line-height:1;letter-spacing:-.02em}
@@ -299,9 +309,9 @@
 <nav id="nav">
   <a class="brand" href="#top">pry<span>pp.</span></a>
   <div class="nav-links">
-    <a href="#work">Work</a>
     <a href="#about">About</a>
-    <a href="#services">Services</a>
+    <a href="#experience">Experience</a>
+    <a href="#art">Art</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -324,11 +334,11 @@
   <span class="spark s5">✧</span>
 
   <div class="hero-body">
-    <span class="eyebrow load d1">Digital Artist · Maker · Bangkok</span>
-    <h1 class="load d2">Painting in<br>pixels &amp;<br><em class="shimmer">light.</em></h1>
-    <p class="hero-sub load d3">I make digital paintings, illustrations, and the small creative tools that help art happen.</p>
+    <span class="eyebrow load d1">JP–TH Translator · Digital Artist · JLPT N2</span>
+    <h1 class="load d2">Fluent in<br>words &amp;<br><em class="shimmer">color.</em></h1>
+    <p class="hero-sub load d3">Japanese–Thai translator and interpreter by trade, digital artist at heart — bridging two languages, and painting in between.</p>
     <div class="hero-cta load d4">
-      <a class="btn btn-primary magnetic" href="#work">View the work →</a>
+      <a class="btn btn-primary magnetic" href="#experience">See my work →</a>
       <a class="btn btn-ghost" href="#contact">Get in touch</a>
     </div>
   </div>
@@ -343,14 +353,73 @@
   </div>
 </div>
 
-<!-- WORK -->
-<section id="work" class="wrap">
+<!-- ABOUT -->
+<section id="about" class="wrap">
   <div class="sec-head reveal">
     <div>
-      <div class="sec-num">001 — Selected Work</div>
-      <h2 class="sec-title">A small <em>gallery</em></h2>
+      <div class="sec-num">001 — About</div>
+      <h2 class="sec-title">A bit <em>about me</em></h2>
     </div>
-    <p style="max-width:34ch;color:var(--cream-dim);font-size:15px">Placeholder pieces for now — drop your real artwork in and these update instantly.</p>
+  </div>
+  <div class="about-grid">
+    <div class="reveal">
+      <p class="about-lead">I'm a Japanese–Thai translator and interpreter — and a digital artist at heart. Equally at home <b>bridging two languages</b> and painting with light.</p>
+      <p class="about-body">By trade I work between Japanese and Thai (JLPT N2): translating business documents, interpreting, and supporting Japanese-facing teams — with frontline experience both in Japan and in Bangkok. On the side, I'm building a digital-art practice I hope to grow into something bigger. This portfolio is hand-built and open-source.</p>
+      <div class="facts">
+        <div class="fact"><span>Languages</span><span>JP (N2) · TH · EN</span></div>
+        <div class="fact"><span>Certificates</span><span>JLPT N2 · TOEIC 640</span></div>
+        <div class="fact"><span>Field</span><span>Translation · Interpretation</span></div>
+        <div class="fact"><span>Also</span><span>Digital Art · Illustration</span></div>
+        <div class="fact"><span>Based in</span><span>Thailand ⇄ Japan</span></div>
+        <div class="fact"><span>Open to</span><span>Work · Art commissions</span></div>
+      </div>
+    </div>
+    <div class="portrait reveal">
+      <div class="canvas cp"></div>
+      <span class="tag">Portrait</span>
+      <span class="mono">P.</span>
+      <div class="pmeta">Self-portrait · placeholder</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="wrap">
+  <div class="sec-head reveal">
+    <div>
+      <div class="sec-num">002 — Experience</div>
+      <h2 class="sec-title">Work <em>history</em></h2>
+    </div>
+    <p style="max-width:34ch;color:var(--cream-dim);font-size:15px">Japanese-facing roles across Thailand and Japan.</p>
+  </div>
+  <div class="timeline stagger reveal">
+    <div class="xp">
+      <div><div class="period">Sep 2025 — Present</div><div class="place">Freelance · Corporate &amp; individual clients</div></div>
+      <div><h3>Japanese–Thai Translator</h3><p>Translate business documents, contracts and presentations between Japanese and Thai. Support business-consulting workflows through accurate JP–TH localization, leveraging JLPT N2 proficiency.</p></div>
+    </div>
+    <div class="xp">
+      <div><div class="period">Mar 2025 — Sep 2025</div><div class="place">KCC Co., Ltd. (LeTAO Store)<br>Otaru, Hokkaido 🇯🇵</div></div>
+      <div><h3>Shop Sales</h3><p>Served 60+ Japanese, English and multilingual customers daily at a premium confectionery brand. Operated POS systems, handled daily cashier reconciliation, and managed inventory and displays through high-traffic festival seasons.</p></div>
+    </div>
+    <div class="xp">
+      <div><div class="period">May 2024 — Feb 2025</div><div class="place">Otani Supermarket<br>Tochigi 🇯🇵</div></div>
+      <div><h3>Part-time Cashier</h3><p>Managed checkout operations and provided daily customer service.</p></div>
+    </div>
+    <div class="xp">
+      <div><div class="period">Jan 2019 — Jun 2022</div><div class="place">DYM International Clinic<br>Bangkok 🇹🇭</div></div>
+      <div><h3>Reception Manager &amp; Administration</h3><p>Supervised a front-desk team of 5+, managed schedules and coordinated general affairs for Japanese medical staff. Handled 30+ multilingual inquiries daily, drafted trilingual official documents, provided Japanese–Thai medical interpretation, and assisted with invoices and OT calculations.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ART PORTFOLIO -->
+<section id="art" class="wrap">
+  <div class="sec-head reveal">
+    <div>
+      <div class="sec-num">003 — Art Portfolio</div>
+      <h2 class="sec-title">Painting on the <em>side</em></h2>
+    </div>
+    <p style="max-width:40ch;color:var(--cream-dim);font-size:15px">A creative practice I'm growing toward — digital painting &amp; illustration, made with warmth and color. <em>(Placeholder pieces; real work coming soon.)</em></p>
   </div>
   <div class="gallery stagger reveal">
     <div class="piece span-7 wide"><div class="canvas c1"></div><span class="tag">Painting</span><div class="meta"><h3>Ember Bloom</h3><p>Digital painting · 2026</p></div></div>
@@ -363,40 +432,11 @@
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="wrap">
-  <div class="sec-head reveal">
-    <div>
-      <div class="sec-num">002 — About</div>
-      <h2 class="sec-title">The <em>hand</em> behind it</h2>
-    </div>
-  </div>
-  <div class="about-grid">
-    <div class="reveal">
-      <p class="about-lead">I'm a digital artist who paints with light and codes the tools that make the painting faster. I care about <b>warmth</b>, texture, and getting the small details exactly right.</p>
-      <p class="about-body">My work lives between the canvas and the command line — illustration and concept art on a tablet, and Python tooling for everything around it (brush pipelines, batch processing, generative studies). This portfolio itself is hand-built and open-source.</p>
-      <div class="facts">
-        <div class="fact"><span>Based in</span><span>Bangkok, TH</span></div>
-        <div class="fact"><span>Focus</span><span>Painting · Illustration</span></div>
-        <div class="fact"><span>Tools</span><span>GoPaint · Python · Pillow</span></div>
-        <div class="fact"><span>Open to</span><span>Commissions · Collabs</span></div>
-        <div class="fact"><span>Since</span><span>2025</span></div>
-      </div>
-    </div>
-    <div class="portrait reveal">
-      <div class="canvas cp"></div>
-      <span class="tag">Portrait</span>
-      <span class="mono">P.</span>
-      <div class="pmeta">Self-portrait · placeholder</div>
-    </div>
-  </div>
-</section>
-
 <!-- SERVICES -->
 <section id="services" class="wrap">
   <div class="sec-head reveal">
     <div>
-      <div class="sec-num">003 — Services</div>
+      <div class="sec-num">004 — Art Services</div>
       <h2 class="sec-title">What I <em>offer</em></h2>
     </div>
   </div>
@@ -412,18 +452,18 @@
 
 <!-- CONTACT -->
 <section id="contact" class="wrap contact">
-  <div class="sec-num reveal" style="text-align:center;margin-bottom:18px">004 — Contact</div>
+  <div class="sec-num reveal" style="text-align:center;margin-bottom:18px">005 — Contact</div>
   <div class="big reveal">Let's make<br>something <em>good.</em></div>
   <div class="socials reveal">
-    <a href="https://github.com/prypp" target="_blank" rel="noopener">GitHub ↗</a>
     <a href="mailto:hello@example.com">Email ↗</a>
+    <a href="https://github.com/prypp" target="_blank" rel="noopener">GitHub ↗</a>
+    <a href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
     <a href="#" target="_blank" rel="noopener">Instagram ↗</a>
-    <a href="#" target="_blank" rel="noopener">ArtStation ↗</a>
   </div>
 </section>
 
 <footer class="wrap">
-  <span>© 2026 prypp — all work shown is placeholder.</span>
+  <span>© 2026 prypp · Japanese–Thai Translator &amp; Digital Artist</span>
   <span>Hand-built · Hosted on GitHub Pages</span>
 </footer>
 
