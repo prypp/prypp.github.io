@@ -181,6 +181,8 @@
 
   /* drifting background blobs */
   .bg-blobs{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+  .grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:160px 160px}
   .bg-blobs i{position:absolute;border-radius:50%;filter:blur(100px);opacity:.62;will-change:transform;display:block}
   .bg-blobs .b1{width:42vw;height:42vw;left:-8vw;top:-10vw;background:radial-gradient(circle,#ffb3d8,transparent 70%);animation:drift1 22s ease-in-out infinite}
   .bg-blobs .b2{width:38vw;height:38vw;right:-6vw;top:28vh;background:radial-gradient(circle,#9ceede,transparent 70%);animation:drift2 26s ease-in-out infinite}
@@ -287,7 +289,7 @@
 
   /* ---------- EXPERIENCE ---------- */
   .timeline{border-top:1px solid var(--line)}
-  .xp{display:grid;grid-template-columns:210px 1fr;gap:32px;padding:26px 20px;border-radius:18px;border-bottom:1px solid var(--line);transition:background .7s ease-in-out}
+  .xp{display:grid;grid-template-columns:210px 1fr;gap:32px;padding:26px 16px;border-bottom:1px solid var(--line);transition:background .7s ease-in-out}
   .xp:hover{background:radial-gradient(130% 170% at 50% 45%,rgba(255,206,58,.30),rgba(255,206,58,.09) 46%,transparent 72%)}
   .xp.ft:hover{background:radial-gradient(130% 170% at 50% 45%,rgba(150,182,92,.36),rgba(150,182,92,.11) 46%,transparent 72%)}
   .ft-tag{display:inline-block;margin-left:9px;vertical-align:middle;font-family:"Hanken Grotesk",sans-serif;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4f7222;background:rgba(150,182,92,.30);padding:3px 9px;border-radius:100px}
@@ -354,6 +356,7 @@
 <body>
 
 <div class="bg-blobs" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i></div>
+<div class="grain" aria-hidden="true"></div>
 <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
 <nav id="nav">
