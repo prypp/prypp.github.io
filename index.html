@@ -230,7 +230,8 @@
   .fact span:last-child{text-align:right}
 
   /* ---------- WORK GALLERY ---------- */
-  .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+  .gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:18px}
+  .gallery .piece{flex:0 1 calc(25% - 14px)}
   .piece{
     position:relative;border-radius:22px;overflow:hidden;cursor:pointer;
     border:1px solid var(--line);
@@ -255,7 +256,7 @@
   .span-6{grid-column:span 6}.span-4{grid-column:span 4}.span-8{grid-column:span 8}.span-3{grid-column:span 3}
   .tall{aspect-ratio:4/5}.wide{aspect-ratio:16/11}
   @media(max-width:820px){
-    .gallery{grid-template-columns:repeat(2,1fr)}
+    .gallery .piece{flex-basis:calc(50% - 9px)}
     .span-7,.span-5,.span-6,.span-4,.span-8,.span-3{grid-column:span 1}
     .wide{aspect-ratio:4/5}
   }
@@ -506,6 +507,7 @@
     <div class="piece span-3 tall"><div class="canvas" style="background:url('art-pig.jpg') center/cover"></div><span class="tag">3D</span><div class="meta"><h3>Piggy Cone</h3><p>Nomad Sculpt · 2026</p></div></div>
     <div class="piece span-3 tall"><div class="canvas" style="background:url('art-ghost.jpg') center/cover"></div><span class="tag">3D</span><div class="meta"><h3>Little Ghost</h3><p>Nomad Sculpt · 2026</p></div></div>
     <div class="piece span-3 tall"><div class="canvas" style="background:url('art-panda.jpg') center/cover"></div><span class="tag">3D</span><div class="meta"><h3>Panda Mochi</h3><p>Nomad Sculpt · 2026</p></div></div>
+    <div class="piece span-3 tall"><div class="canvas" style="background:url('art-bear-illus.jpg') center/cover"></div><span class="tag">Illustration</span><div class="meta"><h3>Hooded Bear</h3><p>Procreate · 2026</p></div></div>
   </div>
 </section>
 
