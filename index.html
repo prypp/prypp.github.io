@@ -296,6 +296,28 @@
   .socials{margin-top:48px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
   .socials a{padding:12px 22px;border:1px solid var(--line);border-radius:100px;font-size:14px;letter-spacing:.04em;transition:.3s var(--ease)}
   .socials a:hover{border-color:var(--vermilion);transform:translateY(-3px)}
+  .cv-cta{margin-top:30px}
+  .btn-cv{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:100px;font-size:14.5px;font-weight:600;cursor:pointer;border:none;
+    background:var(--vermilion);color:#fff;box-shadow:0 12px 26px rgba(255,95,162,.38);transition:transform .3s var(--ease),box-shadow .3s,background .3s}
+  .btn-cv:hover{transform:translateY(-3px);background:var(--vermilion-deep);box-shadow:0 16px 34px rgba(255,95,162,.5)}
+
+  /* CV consent modal */
+  .modal-backdrop{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:22px;
+    background:rgba(74,53,80,.40);backdrop-filter:blur(7px);opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+  .modal-backdrop.open{opacity:1;visibility:visible}
+  .modal{background:linear-gradient(160deg,#fff6fb,#f3ecff);border:1px solid var(--line);border-radius:28px;max-width:440px;width:100%;
+    padding:36px 32px 30px;text-align:center;box-shadow:0 34px 90px rgba(150,70,120,.30);
+    transform:translateY(18px) scale(.95);transition:transform .45s var(--ease)}
+  .modal-backdrop.open .modal{transform:none}
+  .modal .ico{font-size:36px;line-height:1}
+  .modal h3{font-family:"Cormorant",serif;font-weight:600;font-size:32px;margin:10px 0 10px;color:var(--cream);letter-spacing:-.01em}
+  .modal p{color:var(--cream-dim);font-size:15px;line-height:1.6;margin-bottom:24px}
+  .modal-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .modal-actions button,.modal-actions a{padding:12px 24px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:1px solid var(--line);transition:.3s var(--ease);text-decoration:none}
+  .m-ok{background:var(--vermilion);color:#fff;border-color:transparent;box-shadow:0 10px 22px rgba(255,95,162,.38)}
+  .m-ok:hover{background:var(--vermilion-deep);transform:translateY(-2px)}
+  .m-cancel{background:rgba(255,255,255,.6);color:var(--cream)}
+  .m-cancel:hover{border-color:var(--vermilion)}
 
   footer{border-top:1px solid var(--line);padding:34px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--cream-dim)}
 
@@ -516,7 +538,22 @@
     <a href="mailto:peeraya.puim@gmail.com">peeraya.puim@gmail.com ↗</a>
     <a href="https://github.com/prypp" target="_blank" rel="noopener">GitHub ↗</a>
   </div>
+  <div class="cv-cta reveal">
+    <button class="btn-cv" data-cv type="button">Download CV ↓</button>
+  </div>
 </section>
+
+<div class="modal-backdrop" id="cvModal" role="dialog" aria-modal="true" aria-labelledby="cvTitle">
+  <div class="modal">
+    <div class="ico">🌸</div>
+    <h3 id="cvTitle">Download CV?</h3>
+    <p id="cvMsg">This CV contains personal information. By continuing, you agree to use it only for recruitment or professional consideration.</p>
+    <div class="modal-actions" id="cvActions">
+      <button class="m-cancel" id="cvCancel" type="button">Cancel</button>
+      <button class="m-ok" id="cvOk" type="button">Agree &amp; download</button>
+    </div>
+  </div>
+</div>
 
 <footer class="wrap">
   <span>© 2026 Peeraya P. · Japanese–Thai Translator &amp; Designer</span>
@@ -533,6 +570,19 @@
     es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
   },{threshold:.16});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // ---- CV consent modal (file not published yet → route to email request)
+  const cvModal=document.getElementById('cvModal');
+  const closeCv=()=>cvModal.classList.remove('open');
+  document.querySelectorAll('[data-cv]').forEach(b=>b.addEventListener('click',()=>cvModal.classList.add('open')));
+  document.getElementById('cvCancel').addEventListener('click',closeCv);
+  cvModal.addEventListener('click',e=>{if(e.target===cvModal)closeCv();});
+  addEventListener('keydown',e=>{if(e.key==='Escape')closeCv();});
+  document.getElementById('cvOk').addEventListener('click',()=>{
+    document.getElementById('cvMsg').textContent="Thank you! My CV isn't posted online yet — drop me an email and I'll send it right over. 🌷";
+    document.getElementById('cvActions').innerHTML='<button class="m-cancel" id="cvClose2" type="button">Close</button><a class="m-ok" href="mailto:peeraya.puim@gmail.com?subject=CV%20request&body=Hi%20Peeraya%2C%20could%20you%20share%20your%20CV%3F">Email me ↗</a>';
+    document.getElementById('cvClose2').addEventListener('click',closeCv);
+  });
 
   // subtle parallax tilt on gallery pieces
   document.querySelectorAll('.piece').forEach(p=>{
