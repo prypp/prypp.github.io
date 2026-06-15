@@ -206,8 +206,9 @@
   .sec-num{font-family:"Cormorant",serif;font-size:14px;color:var(--accent-ink);letter-spacing:.1em}
   .sec-title{font-family:"Cormorant",serif;font-weight:600;font-size:clamp(36px,6vw,72px);line-height:1;letter-spacing:-.01em}
   .sec-title em{font-style:italic}
-  .studio-logo{display:block;max-width:min(280px,68%);height:auto;margin:10px 0 0}
-  .studio-fallback{display:inline-block;margin-top:6px;font-family:"Cormorant",serif;font-style:italic;font-weight:600;font-size:clamp(40px,6vw,64px);line-height:1;color:var(--vermilion)}
+  .studio-title{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap}
+  .studio-logo{display:block;height:clamp(30px,4.4vw,54px);width:auto;margin:0 0 8px}
+  .studio-fallback{display:inline-block;align-self:flex-end;margin:0 0 2px;font-family:"Cormorant",serif;font-style:italic;font-weight:600;font-size:clamp(34px,5vw,60px);line-height:1;color:var(--vermilion)}
 
   /* ---------- ABOUT ---------- */
   .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:64px;align-items:center}
@@ -495,7 +496,7 @@
   <span class="flower" style="width:42px;height:42px;bottom:4%;right:3%;animation-delay:1.4s" aria-hidden="true"><i></i></span>
   <span class="flower" style="width:24px;height:24px;bottom:7%;left:5%;animation-delay:2.1s" aria-hidden="true"><i></i></span>
   <div class="sec-head reveal">
-    <div>
+    <div class="studio-title">
       <h2 class="sec-title">My studio,</h2>
       <img class="studio-logo" src="rayeah-logo.png" alt="ra-yeah!" onerror="this.outerHTML='<span class=&quot;studio-fallback&quot;>ra-yeah!</span>'" />
     </div>
