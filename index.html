@@ -580,6 +580,26 @@
   },{threshold:.16});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
+  // ---- featured card: show a random real piece each visit
+  (function(){
+    const ART=[
+      {img:'art-applecat.jpg',t:'Apple Cat',tag:'Illustration'},
+      {img:'art-bear.jpg',t:'Cherry Bear',tag:'3D'},
+      {img:'art-pig.jpg',t:'Piggy Cone',tag:'3D'},
+      {img:'art-ghost.jpg',t:'Little Ghost',tag:'3D'},
+      {img:'art-panda.jpg',t:'Panda Mochi',tag:'3D'},
+      {img:'art-gentlebear.jpg',t:'Mr. Gentle Bear',tag:'LINE Theme'},
+      {img:'art-framedcat.jpg',t:'Framed Kitty',tag:'Illustration'},
+      {img:'art-leafbat.jpg',t:'Under the Leaf',tag:'Illustration'},
+      {img:'art-bear-illus.jpg',t:'Hooded Bear',tag:'Illustration'}
+    ];
+    const fa=document.getElementById('featArt'); if(!fa) return;
+    const pick=ART[Math.floor(Math.random()*ART.length)];
+    const cv=fa.querySelector('.canvas'); if(cv){cv.style.background="url('"+pick.img+"') center/cover";}
+    const cap=fa.querySelector('.art-cap'); if(cap) cap.textContent=pick.t;
+    const tg=fa.querySelector('.tag'); if(tg) tg.textContent=pick.tag+' · 2026';
+  })();
+
   // ---- CV consent modal (file not published yet → route to email request)
   const cvModal=document.getElementById('cvModal');
   const closeCv=()=>cvModal.classList.remove('open');
