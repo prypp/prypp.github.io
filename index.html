@@ -648,7 +648,7 @@
     ];
     const fa=document.getElementById('featArt'); if(!fa) return;
     const pick=ART[Math.floor(Math.random()*ART.length)];
-    const cv=fa.querySelector('.canvas'); if(cv){cv.style.background="url('"+pick.img+"') center/cover";}
+    const cv=fa.querySelector('.canvas'); if(cv){cv.style.background="url('"+pick.img+"') center/cover";cv.setAttribute('role','img');cv.setAttribute('aria-label',pick.t+' — '+pick.tag);}
     const cap=fa.querySelector('.art-cap'); if(cap) cap.textContent=pick.t;
     const tg=fa.querySelector('.tag'); if(tg) tg.textContent=pick.tag+' · 2026';
   })();
