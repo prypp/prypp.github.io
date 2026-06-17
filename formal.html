@@ -16,6 +16,7 @@
     --accent:#bd4548; --line:rgba(63,52,47,.13); --maxw:880px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
+  img,.head-photo,.cc-thumbs img{-webkit-user-drag:none;user-drag:none;-webkit-touch-callout:none}
   html{scroll-behavior:smooth}
   body{background:var(--bg);color:var(--ink);font-family:"Hanken Grotesk",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
   a{color:var(--accent);text-decoration:none}
@@ -227,12 +228,17 @@
   </section>
 
   <footer>
-    <span>© 2026 Peeraya Pu-Im · Designed &amp; hand-built with AI (Claude · Gemini) — no template, no coding background.</span>
+    <span>© 2026 Peeraya Pu-Im · All rights reserved · Designed &amp; hand-built with AI (Claude · Gemini) — no template, no coding background.</span>
     <span><a href="mailto:peeraya.puim@gmail.com">peeraya.puim@gmail.com</a></span>
   </footer>
 </div>
 
 <script>
+  // deter casual image saving (right-click / drag) on artwork & photos
+  ['contextmenu','dragstart'].forEach(ev=>document.addEventListener(ev,e=>{
+    if(e.target.closest('img,.head-photo,.cc-thumbs'))e.preventDefault();
+  }));
+
   document.getElementById('cvBtn').addEventListener('click',function(e){
     e.preventDefault();
     alert("CV download isn't published yet — please email peeraya.puim@gmail.com and I'll send it right over.");
