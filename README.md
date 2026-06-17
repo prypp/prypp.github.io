@@ -48,11 +48,10 @@ No dependencies — it's just static files.
 ```
 index.html        Creative portfolio (pink "Bubblegum" theme, Cormorant + Hanken Grotesk)
 formal.html       Professional résumé (Spring palette, Newsreader)
-art-*.jpg         Gallery artwork (3D, illustration, e-reader skin)
-me.jpg            Portrait
-rayeah-logo.png   ra-yeah! wordmark
-og.png            Social share image
-themes.html, fonts*.html, layouts.html   Design-exploration scratchpads (noindex)
+assets/           Images — gallery artwork, portrait, ra-yeah! logo, social share
+README.md         This file
+LICENSE           All rights reserved (code + artwork)
+.nojekyll         Serve files as-is (no Jekyll build)
 ```
 
 ## Deploy
